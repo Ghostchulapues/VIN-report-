@@ -1,0 +1,172 @@
+
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'vinchain_site'@'5.161.252.14' (using password: YES) in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=135....', 'vinchain_site', 'Cfsgdhmjd6Tge', NULL)
+#1 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Command.php(303): yii\db\Command->prepare()
+#6 /home/vinchain/sites/vinchain_website.prod/helpers/ReportHelper.php(237): yii\db\Command->bindParam(':vin', 'JHMGE8H64BS0097...')
+#7 /home/vinchain/sites/vinchain_website.prod/helpers/ReportHelper.php(106): app\helpers\ReportHelper->carCheck('JHMGE8H64BS0097...')
+#8 /home/vinchain/sites/vinchain_website.prod/controllers/ReportController.php(311): app\helpers\ReportHelper->ownerships('JHMGE8H64BS0097...', Array, 44915)
+#9 /home/vinchain/sites/vinchain_website.prod/controllers/ReportController.php(57): app\controllers\ReportController->actionView('3f55228e6b9d28a...', true)
+#10 [internal function]: app\controllers\ReportController->actionSample()
+#11 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#13 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('sample', Array)
+#14 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('report/sample', Array)
+#15 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /home/vinchain/sites/vinchain_website.prod/web/index.php(126): yii\base\Application->run()
+#17 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'vinchain_site'@'5.161.252.14' (using password: YES) in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Command.php(303): yii\db\Command->prepare()
+#4 /home/vinchain/sites/vinchain_website.prod/helpers/ReportHelper.php(237): yii\db\Command->bindParam(':vin', 'JHMGE8H64BS0097...')
+#5 /home/vinchain/sites/vinchain_website.prod/helpers/ReportHelper.php(106): app\helpers\ReportHelper->carCheck('JHMGE8H64BS0097...')
+#6 /home/vinchain/sites/vinchain_website.prod/controllers/ReportController.php(311): app\helpers\ReportHelper->ownerships('JHMGE8H64BS0097...', Array, 44915)
+#7 /home/vinchain/sites/vinchain_website.prod/controllers/ReportController.php(57): app\controllers\ReportController->actionView('3f55228e6b9d28a...', true)
+#8 [internal function]: app\controllers\ReportController->actionSample()
+#9 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('sample', Array)
+#12 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('report/sample', Array)
+#13 /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/vinchain/sites/vinchain_website.prod/web/index.php(126): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'vinchain_site'@'5.161.252.14' (using password: YES)
+)
+
+Copied!Copy StacktraceSearch StackoverflowSearch GoogleException
+Database Exception – yii\db\Exception
+SQLSTATE[HY000] [1045] Access denied for user 'vinchain_site'@'5.161.252.14' (using password: YES)
+Error Info: Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'vinchain_site'@'5.161.252.14' (using password: YES)
+)
+↵
+Caused by: PDOException
+SQLSTATE[HY000] [1045] Access denied for user 'vinchain_site'@'5.161.252.14' (using password: YES)
+in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php at line 723
+
+1. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.phpat line 649
+640641642643644645646647648649650651652653654655656657658 
+            if ($enableProfiling) {
+                Yii::endProfile($token, __METHOD__);
+            }
+        } catch (\PDOException $e) {
+            if ($enableProfiling) {
+                Yii::endProfile($token, __METHOD__);
+            }
+ 
+            throw new Exception($e->getMessage(), $e->errorInfo, (int) $e->getCode(), $e);
+        }
+    }
+ 
+    /**
+     * Closes the currently active DB connection.
+     * It does nothing if the connection is already closed.
+     */
+    public function close()
+    {
+2. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php at line 1063– yii\db\Connection::open()
+3. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Connection.php at line 1050– yii\db\Connection::getMasterPdo()
+4. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Command.php at line 261– yii\db\Connection::getSlavePdo()
+5. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/db/Command.php at line 303– yii\db\Command::prepare()
+6. in /home/vinchain/sites/vinchain_website.prod/helpers/ReportHelper.php at line 237– yii\db\Command::bindParam(':vin', 'JHMGE8H64BS009779')
+231232233234235236237238239240241242243    {
+       // return $vin;
+        if (empty($this->carCheck[$vin])) {
+            $db = Yii::$app->parser_db;
+ 
+            $dt = $db->createCommand("SELECT * from tbl_carcheck where vin=:vin and `type`='carfax' and last_check > (DATE_SUB(CURDATE(), INTERVAL 3 MONTH)) order by last_check desc limit 1")
+                     ->bindParam(':vin', $vin)
+                     ->queryOne();
+ 
+            if (!$dt) {
+                return null;
+            }
+ 
+7. in /home/vinchain/sites/vinchain_website.prod/helpers/ReportHelper.php at line 106– app\helpers\ReportHelper::carCheck('<span class="string">'JHMGE8H64B...')
+100101102103104105106107108109110111112 
+        return $price_history;
+    }
+ 
+    public function ownerships($vin, $vinAuditData = null, $lastOdo = 0)
+    {
+        $carCheck = $this->carCheck($vin);
+ 
+        if (!empty($carCheck['data']['ownership_history'])) {
+            $history = [];
+            $k       = '';
+            foreach ($carCheck['data']['ownership_history'] as $key => $row) {
+                foreach ($row as $kk => $item) {
+8. in /home/vinchain/sites/vinchain_website.prod/controllers/ReportController.php at line 311– app\helpers\ReportHelper::ownerships('JHMGE8H64BS009779', ['vin' => 'JHMGE8H64BS009779', 'id' => 'info@vinin.568774228113', 'date' => '2019-06-17 05:06:13 PDT', 'specs' => ['VIN' => 'JHMGE8H64BS009779', 'Year' => '2011', 'Make' => 'Honda', 'Model' => 'Fit', ...], ...], 44915)
+305306307308309310311312313314315316317        }
+ 
+        $odometers = $reportsHelper->odometers($vinAuditData, $vinDbdata, $serviceData);
+ 
+        $lastOdo = $reportsHelper->lastOdometer($odometers);
+ 
+        $ownerships = $reportsHelper->ownerships($vin, $vinAuditData, $lastOdo);
+ 
+        $img = $reportsHelper->img($vinDbdata);
+ 
+        $damages = $reportsHelper->damages($vin, $vinAuditData, $vinDbdata);
+ 
+ 
+9. in /home/vinchain/sites/vinchain_website.prod/controllers/ReportController.php at line 57– app\controllers\ReportController::actionView('3f55228e6b9d28afccc79f590ee31f17', true)
+51525354555657585960616263        $hash = '3f55228e6b9d28afccc79f590ee31f17';
+       //$hash = 'ef0022a01d42deedfc8fd9e042d89e26';
+//        $hash = '168943f471287174adb77854322fd93c';
+        /*$hash = '051412b0cddccbcf1e5e0e623ca330cd';
+     $hash = 'f8a59b8def4b380443ee6e49bdb0d69b';*/
+ 
+        return $this->actionView($hash, true);
+    }
+ 
+    public function actionView_old2($hash)
+    {
+        /* if (Yii::$app->user->isGuest) {
+             Yii::$app->session->setFlash('back-url', Url::current());
+10. app\controllers\ReportController::actionSample()
+11. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/InlineAction.php at line 57– call_user_func_array([app\controllers\ReportController, 'actionSample'], [])
+12. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Controller.php at line 181– yii\base\InlineAction::runWithParams([])
+13. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Module.php at line 534– yii\base\Controller::runAction('sample', [])
+14. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/web/Application.php at line 104– yii\base\Module::runAction('report/sample', [])
+15. in /home/vinchain/sites/vinchain_website.prod/vendor/yiisoft/yii2/base/Application.php at line 392– yii\web\Application::handleRequest(yii\web\Request)
+16. in /home/vinchain/sites/vinchain_website.prod/web/index.php at line 126– yii\base\Application::run()
+120121122123124125126require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
+ 
+$config = require(__DIR__ . '/../config/web.php');
+ 
+ 
+ 
+(new yii\web\Application($config))->run();
+$_COOKIE = [
+    'PHPSESSID' => 'f53935ff98e3900aa8ab3bd29d3a34ac',
+    '_gid' => 'GA1.2.982463267.1725638819',
+    '_ga_TR72KDCTG6' => 'GS1.1.1725638819.1.1.1725639012.37.0.0',
+    '_ga' => 'GA1.1.2125589738.1725638819',
+];
+
+$_SESSION = [
+    '__flash' => [],
+];
+Yii Framework
+2024-09-06, 11:13:29
+
+nginx/1.27.0
+
+Yii Framework/2.0.43
